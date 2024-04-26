@@ -13,7 +13,7 @@ struct SearchView: View {
     @State private var numberOfRows = 2
     
     let spacingRows: CGFloat = 10
-    let itemInCategories = CategoriesManager()
+    let itemInCategories = CategoriesItem()
     
     var body: some View {
         let columns = Array(repeating: GridItem(.flexible(),

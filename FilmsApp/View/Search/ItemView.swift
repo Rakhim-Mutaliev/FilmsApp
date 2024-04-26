@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ItemView: View {
+    
     let item: Categories
     
     var body: some View {
@@ -23,9 +24,6 @@ struct ItemView: View {
                         .scaledToFill()
                         .frame(width: imageWidth)
                         .background(Color.purple)
-                       // .foregroundColor(.white)
-                    
-                   // Spacer()
                     
                     Text(item.title)
                         .font(.system(size: fontSize))

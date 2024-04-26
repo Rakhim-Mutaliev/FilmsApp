@@ -1,5 +1,5 @@
 //
-//  CategoriesManager.swift
+//  CategoriesItem.swift
 //  FilmsApp
 //
 //  Created by Rakhim  on 26.04.2024.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CategoriesManager {
+struct CategoriesItem {
     let items = [
         Categories(title: "Драма", image: "Драма"),
         Categories(title: "Комедии", image: "Комедии"),
