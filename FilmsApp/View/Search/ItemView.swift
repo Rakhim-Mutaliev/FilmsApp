@@ -23,7 +23,7 @@ struct ItemView: View {
                         .resizable()
                         .scaledToFill()
                         .frame(width: imageWidth)
-                        .background(Color.purple)
+                        //.background(Color.purple)
                     
                     Text(item.title)
                         .font(.system(size: fontSize))

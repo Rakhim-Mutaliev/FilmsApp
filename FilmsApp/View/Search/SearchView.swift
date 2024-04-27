@@ -14,20 +14,24 @@ struct SearchView: View {
     
     let spacingRows: CGFloat = 10
     let itemInCategories = CategoriesItem()
+    let openCategory = OpenedCategories()
     
     var body: some View {
         let columns = Array(repeating: GridItem(.flexible(),
-                            spacing: spacingRows),
+                                                spacing: spacingRows),
                             count: numberOfRows)
         
         NavigationView {
             ScrollView {
                 LazyVGrid(columns: columns, spacing: spacingRows) {
                     ForEach(itemInCategories.items) { item in
-                        ItemView(item: item)
+                        NavigationLink(destination: openCategory) {
+                            ItemView(item: item)
+                        }
                     }
                 }
                 .padding(10)
+                
             }
             .navigationTitle("Search")
             .searchable(text: $searchBar, prompt: "Поиск фильмов")

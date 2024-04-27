@@ -21,6 +21,7 @@
 		427CAB912BDBBBA300138742 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427CAB902BDBBBA300138742 /* Categories.swift */; };
 		4292F25B2BDBC8B400B59123 /* CategoriesItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4292F25A2BDBC8B400B59123 /* CategoriesItem.swift */; };
 		4292F25D2BDBCBAF00B59123 /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4292F25C2BDBCBAF00B59123 /* ItemView.swift */; };
+		42FAA4652BDD1A5400D9EADA /* OpenedCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FAA4642BDD1A5400D9EADA /* OpenedCategories.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		427CAB902BDBBBA300138742 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
 		4292F25A2BDBC8B400B59123 /* CategoriesItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesItem.swift; sourceTree = "<group>"; };
 		4292F25C2BDBCBAF00B59123 /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
+		42FAA4642BDD1A5400D9EADA /* OpenedCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenedCategories.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				427CAB8C2BDBA1C700138742 /* SearchView.swift */,
+				42FAA4642BDD1A5400D9EADA /* OpenedCategories.swift */,
 				4292F25A2BDBC8B400B59123 /* CategoriesItem.swift */,
 				4292F25C2BDBCBAF00B59123 /* ItemView.swift */,
 			);
@@ -344,6 +347,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42FAA4652BDD1A5400D9EADA /* OpenedCategories.swift in Sources */,
 				427CAB8D2BDBA1C700138742 /* SearchView.swift in Sources */,
 				427CAB912BDBBBA300138742 /* Categories.swift in Sources */,
 				427CAB8B2BDBA1BA00138742 /* LibraryView.swift in Sources */,
