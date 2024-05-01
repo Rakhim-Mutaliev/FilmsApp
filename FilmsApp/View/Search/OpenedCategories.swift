@@ -9,11 +9,19 @@ import SwiftUI
 
 struct OpenedCategories: View {
     
+    @State private var searchBar = ""
+    @State private var numberOfRows = 2
+    
     let title: String
     let imageName: String
     
+    let spacingRows: CGFloat = 10
+    let categoriesItems = CategoriesItem()
+    
     var body: some View {
-        NavigationView {
+        let columns = Array(repeating: GridItem(.flexible(), spacing: spacingRows), count: numberOfRows)
+        
+       // NavigationView {
             ScrollView {
                 VStack {
                     ZStack {
@@ -21,8 +29,6 @@ struct OpenedCategories: View {
                             .resizable()
                             .frame(height: 200)
                             .scaledToFit()
-                            //.background(Color.purple)
-                            //.foregroundColor(.purple)
                         
                         Text(title)
                             .font(.system(size: 19))
@@ -30,9 +36,25 @@ struct OpenedCategories: View {
                             .multilineTextAlignment(.center)
                     }
                 }
+                LazyVGrid(columns: columns, spacing: spacingRows) {
+                    ForEach(categoriesItems.items) { category in
+                        ZStack {
+                            Image(category.image)
+                                .resizable()
+                                .frame(height: 120)
+                                .scaledToFit()
+                                .cornerRadius(20)
+                            Text(category.title)
+                            //.font(.system(size: fontSize))
+                                .foregroundColor(.white)
+                                .multilineTextAlignment(.center)
+                        }
+                    }
+                }
+                .padding(10)
             }
-            
+            .navigationTitle(title)
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
-}
-
+//}
