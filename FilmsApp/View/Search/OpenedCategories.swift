@@ -9,26 +9,30 @@ import SwiftUI
 
 struct OpenedCategories: View {
     
+    let title: String
+    let imageName: String
+    
     var body: some View {
         NavigationView {
             ScrollView {
                 VStack {
                     ZStack {
-                        Image(systemName: "circle")
+                        Image(imageName)
                             .resizable()
                             .frame(height: 200)
-                            .scaledToFill()
-                            .background(Color.purple)
-                            .foregroundColor(.purple)
+                            .scaledToFit()
+                            //.background(Color.purple)
+                            //.foregroundColor(.purple)
                         
-                        Text("MovieName")
+                        Text(title)
                             .font(.system(size: 19))
                             .foregroundColor(.white)
                             .multilineTextAlignment(.center)
                     }
                 }
             }
+            
         }
     }
-    
 }
+
