@@ -7,47 +7,13 @@
 
 import SwiftUI
 
-//struct SearchView: View {
-//
-//    @State private var searchBar = ""
-//    @State private var numberOfRows = 2
-//
-//    let spacingRows: CGFloat = 10
-//    let itemInCategories = CategoriesItem()
-//    let openCategory = OpenedCategories()
-//
-//    var body: some View {
-//        let columns = Array(repeating: GridItem(.flexible(),
-//                                                spacing: spacingRows),
-//                            count: numberOfRows)
-//
-//        NavigationView {
-//            ScrollView {
-//                LazyVGrid(columns: columns, spacing: spacingRows) {
-//                    ForEach(itemInCategories.items) { item in
-//                        NavigationLink(destination: openCategory) {
-//                            Text(item.title)
-//                            Image(item.image)
-//                        }
-//                    }
-//                }
-//                .padding(10)
-//
-//            }
-//            .navigationTitle("Search")
-//            .searchable(text: $searchBar, prompt: "Поиск фильмов")
-//        }
-//
-//    }
-//}
-
 struct SearchView: View {
     
     @State private var searchBar = ""
     @State private var numberOfRows = 2
     
     let spacingRows: CGFloat = 10
-    let categoriesItems = CategoriesItem() // Переименовал переменную для ясности
+    let categoriesItems = CategoriesItem()
     
     var body: some View {
         let columns = Array(repeating: GridItem(.flexible(), spacing: spacingRows), count: numberOfRows)
@@ -66,7 +32,6 @@ struct SearchView: View {
                                         .scaledToFit()
                                         .cornerRadius(20)
                                     Text(category.title)
-                                        //.font(.system(size: fontSize))
                                         .foregroundColor(.white)
                                         .multilineTextAlignment(.center)
                                 }
@@ -81,16 +46,6 @@ struct SearchView: View {
         }
     }
 }
-//
-//ForEach(shopping.list) { item in
-//                    NavigationLink.init(destination: EditView(currentItem: item)) {
-//                        HStack {
-//                            Text(item.name)
-//                            Spacer()
-//                            Text(String(item.quantity))
-//                            Spacer().frame(width: 10)
-//                        }
-//                    }
 
 struct SearchView_Previews: PreviewProvider {
     static var previews: some View {

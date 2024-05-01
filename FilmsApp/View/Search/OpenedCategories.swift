@@ -21,40 +21,37 @@ struct OpenedCategories: View {
     var body: some View {
         let columns = Array(repeating: GridItem(.flexible(), spacing: spacingRows), count: numberOfRows)
         
-       // NavigationView {
-            ScrollView {
-                VStack {
+        ScrollView {
+            VStack {
+                ZStack {
+                    Image(imageName)
+                        .resizable()
+                        .frame(height: 200)
+                        .scaledToFit()
+                    
+                    Text(title)
+                        .font(.system(size: 19))
+                        .foregroundColor(.white)
+                        .multilineTextAlignment(.center)
+                }
+            }
+            LazyVGrid(columns: columns, spacing: spacingRows) {
+                ForEach(categoriesItems.items) { category in
                     ZStack {
-                        Image(imageName)
+                        Image(category.image)
                             .resizable()
-                            .frame(height: 200)
+                            .frame(height: 120)
                             .scaledToFit()
-                        
-                        Text(title)
-                            .font(.system(size: 19))
+                            .cornerRadius(20)
+                        Text(category.title)
                             .foregroundColor(.white)
                             .multilineTextAlignment(.center)
                     }
                 }
-                LazyVGrid(columns: columns, spacing: spacingRows) {
-                    ForEach(categoriesItems.items) { category in
-                        ZStack {
-                            Image(category.image)
-                                .resizable()
-                                .frame(height: 120)
-                                .scaledToFit()
-                                .cornerRadius(20)
-                            Text(category.title)
-                            //.font(.system(size: fontSize))
-                                .foregroundColor(.white)
-                                .multilineTextAlignment(.center)
-                        }
-                    }
-                }
-                .padding(10)
             }
-            .navigationTitle(title)
-            .navigationBarTitleDisplayMode(.inline)
+            .padding(10)
         }
+        .navigationTitle(title)
+        .navigationBarTitleDisplayMode(.inline)
     }
-//}
+}
