@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		426F14332BE3EF8100664842 /* OpenedFilmPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426F14322BE3EF8100664842 /* OpenedFilmPage.swift */; };
 		427CAB562BDB963D00138742 /* FilmsAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427CAB552BDB963D00138742 /* FilmsAppApp.swift */; };
 		427CAB582BDB963D00138742 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427CAB572BDB963D00138742 /* HomeView.swift */; };
 		427CAB5A2BDB963F00138742 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 427CAB592BDB963F00138742 /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		426F14322BE3EF8100664842 /* OpenedFilmPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenedFilmPage.swift; sourceTree = "<group>"; };
 		427CAB522BDB963D00138742 /* FilmsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FilmsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		427CAB552BDB963D00138742 /* FilmsAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsAppApp.swift; sourceTree = "<group>"; };
 		427CAB572BDB963D00138742 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 		427CAB822BDB97FA00138742 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				4292F25A2BDBC8B400B59123 /* CategoriesItem.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -201,7 +204,7 @@
 			children = (
 				427CAB8C2BDBA1C700138742 /* SearchView.swift */,
 				42FAA4642BDD1A5400D9EADA /* OpenedCategories.swift */,
-				4292F25A2BDBC8B400B59123 /* CategoriesItem.swift */,
+				426F14322BE3EF8100664842 /* OpenedFilmPage.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 				4292F25B2BDBC8B400B59123 /* CategoriesItem.swift in Sources */,
 				427CAB582BDB963D00138742 /* HomeView.swift in Sources */,
 				427CAB892BDBA18500138742 /* TabBarView.swift in Sources */,
+				426F14332BE3EF8100664842 /* OpenedFilmPage.swift in Sources */,
 				427CAB8F2BDBA1D300138742 /* ProfileView.swift in Sources */,
 				427CAB562BDB963D00138742 /* FilmsAppApp.swift in Sources */,
 			);

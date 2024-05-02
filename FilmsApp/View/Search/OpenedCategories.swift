@@ -37,15 +37,17 @@ struct OpenedCategories: View {
             }
             LazyVGrid(columns: columns, spacing: spacingRows) {
                 ForEach(categoriesItems.items) { category in
-                    ZStack {
-                        Image(category.image)
-                            .resizable()
-                            .frame(height: 120)
-                            .scaledToFit()
-                            .cornerRadius(20)
-                        Text(category.title)
-                            .foregroundColor(.white)
-                            .multilineTextAlignment(.center)
+                    NavigationLink(destination: OpenedFilmPage(filmName: category.title, filmImage: category.image)) {
+                        ZStack {
+                            Image(category.image)
+                                .resizable()
+                                .frame(height: 120)
+                                .scaledToFit()
+                                .cornerRadius(20)
+                            Text(category.title)
+                                .foregroundColor(.white)
+                                .multilineTextAlignment(.center)
+                        }
                     }
                 }
             }

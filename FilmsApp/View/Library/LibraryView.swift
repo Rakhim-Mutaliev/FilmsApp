@@ -8,11 +8,14 @@
 import SwiftUI
 
 struct LibraryView: View {
+    
     var body: some View {
         NavigationView {
-            Text("LibraryView")
+            Text("Тут будут трейлеры скачанные вами")
+                .foregroundColor(.purple)
+                .opacity(1.0)
             
-                .navigationTitle("Library")
+                .navigationTitle("Медиатека")
         }
     }
 }
